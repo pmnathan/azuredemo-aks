@@ -3,10 +3,15 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "2.42"
-      features {}
     }
   }
 }
+
+provider "azurerm" {
+  features {}
+}
+
+
 
 resource "azurerm_resource_group" "default" {
   name     = var.cluster_name
